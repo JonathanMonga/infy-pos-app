@@ -42,7 +42,7 @@ COPY .env.example .env
 RUN php artisan key:generate --ansi  \
     && php artisan optimize:clear \
     && php artisan storage:link \
-    && php artisan cloudflare:reload \
+    # && php artisan cloudflare:reload \
     && php artisan passport:keys
 
 # Expose port 80
