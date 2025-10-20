@@ -41,9 +41,7 @@ COPY .env.example .env
 # Run Laravel commands
 RUN php artisan key:generate --ansi  \
     && php artisan optimize:clear \
-    && php artisan storage:link \
-    # && php artisan cloudflare:reload \
-    && php artisan passport:keys
+    && php artisan storage:link
 
 # Expose port 80
 EXPOSE 80
